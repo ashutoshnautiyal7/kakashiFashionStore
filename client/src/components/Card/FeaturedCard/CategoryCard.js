@@ -5,6 +5,8 @@ import { Button } from '@mui/material';
 const CategoryCard = (props) => { 
     return ( 
         <div className="category__card__card">
+
+            <Link to={props.data.url} >
                 <div className="category__image"> 
                    <img src= {props.data.image} alt="" className="product__img"/> 
                 </div>
@@ -13,11 +15,12 @@ const CategoryCard = (props) => {
                         {/* <span>{props.data.name}</span> */}
                     </div>
                     <div className="category__card__action">
-                        <Link to={props.data.url}>
                             <Button variant='outlined' sx={[{'&:hover': { backgroundColor: 'none', borderColor: '#FFE26E', color: '#FFE26E'}, borderRadius: '20px' , borderColor: '#FFE26E', backgroundColor: "#FFE26E" , color: "#000", fontWeight: '700'}]}>SHOP NOW</Button>
-                        </Link>
                     </div>
-            </div>
+                </div>
+                </Link>
+
+
         </div>
      );
 }

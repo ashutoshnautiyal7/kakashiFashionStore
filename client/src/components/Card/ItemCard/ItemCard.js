@@ -23,6 +23,9 @@ const ItemCard = (props) => {
     return ( 
         <div className="product__card__card">
             <div className="product__card">
+
+
+            <Link to={`/item/${props.item.category}/${props.item._id}`}>
                 <div className="product__image" 
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
@@ -31,9 +34,9 @@ const ItemCard = (props) => {
                 </div>
                 <div className="product__card__detail">
                     <div className="product__name">
-                        <Link to={`/item/${props.item.category}/${props.item._id}`}>
+                       
                            {props.item.name}
-                        </Link>
+                        
                     </div>
                     <div className="product__description">
                         <span>{props.item.description}</span>
@@ -50,6 +53,8 @@ const ItemCard = (props) => {
                         </IconButton >
                     </div>
                 </div>
+
+                </Link>
             </div>
         </div>
      );
